@@ -1,0 +1,33 @@
+﻿<Project>
+
+  <PropertyGroup>
+    <LanguageTargets>$(MSBuildToolsPath)\Microsoft.CSharp.targets</LanguageTargets>
+    <RootNamespace>ReSharperPlugin.GenericsInlayHints</RootNamespace>
+  </PropertyGroup>
+
+  <Import Project="Sdk.props" Sdk="Microsoft.NET.Sdk" />
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <IsPackable>True</IsPackable>
+    <DefineConstants>$(DefineConstants);RESHARPER</DefineConstants>
+    <IncludeBuildOutput>false</IncludeBuildOutput>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="JetBrains.ReSharper.SDK" Version="2022.3.2" PrivateAssets="all" />
+    <!-- TODO: https://github.com/NuGet/Home/issues/7154 -->
+    <PackageReference Include="Wave" Version="[$(WaveVersion),$(UpperWaveVersion))" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="..\..\..\dependencies.json" PackagePath="" Pack="true" Visible="false" />
+    <Content Include="bin\$(AssemblyName)\$(Configuration)\$(AssemblyName).dll" PackagePath="dotFiles" Pack="true" Visible="false" />
+    <Content Include="bin\$(AssemblyName)\$(Configuration)\$(AssemblyName).pdb" PackagePath="dotFiles" Pack="true" Visible="false" />
+
+    <!-- TODO: add additional assemblies -->
+  </ItemGroup>
+
+  <Import Project="Sdk.targets" Sdk="Microsoft.NET.Sdk" />
+
+</Project>
