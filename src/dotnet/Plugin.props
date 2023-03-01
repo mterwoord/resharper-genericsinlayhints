@@ -10,8 +10,8 @@
     <Copyright>Copyright $([System.DateTime]::Now.Year) Maintainers of Matthijs ter Woord</Copyright>
     <PackageTags>resharper plugin</PackageTags>
 
-    <PackageProjectUrl></PackageProjectUrl>
-    <PackageLicenseUrl></PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/mterwoord/resharper-genericsinlayhints</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/mterwoord/resharper-genericsinlayhints</PackageLicenseUrl>
     <PackageIconUrl></PackageIconUrl>
   </PropertyGroup>
 

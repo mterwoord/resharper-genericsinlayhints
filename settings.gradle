@@ -17,6 +17,6 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'ReSharperPlugin.MyTestPlugin'
+rootProject.name = 'ReSharperPlugin.GenericsInlayHints'
 
 include ':protocol'

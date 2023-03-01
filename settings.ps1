@@ -1,5 +1,5 @@
-$PluginId = "ReSharperPlugin.MyTestPlugin"
-$SolutionPath = "$PSScriptRoot\ReSharperPlugin.MyTestPlugin.sln"
+$PluginId = "ReSharperPlugin.GenericsInlayHints"
+$SolutionPath = "$PSScriptRoot\ReSharperPlugin.GenericsInlayHints.sln"
 $SourceBasePath = "$PSScriptRoot\src\dotnet"
 
 $VsWhereOutput = [xml] (& "$PSScriptRoot\tools\vswhere.exe" -format xml -products *)

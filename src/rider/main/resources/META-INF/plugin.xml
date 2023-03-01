@@ -1,14 +1,14 @@
 <idea-plugin require-restart="true">
-  <id>com.jetbrains.rider.plugins.mytestplugin</id>
-  <name>MyTestPlugin</name>
+  <id>generic-inlay-hints-rider</id>
+  <name>GenericInlayHints</name>
   <version>_PLACEHOLDER_</version>
-  <vendor url="https://project-url">Author</vendor>
+  <vendor url="https://github.com/mterwoord/resharper-genericsinlayhints">Matthijs ter Woord</vendor>
   <idea-version since-build="_PLACEHOLDER_" until-build="_PLACEHOLDER_" />
   <depends>com.intellij.modules.rider</depends>
 
   <description>
 <![CDATA[
-<p>Sample description</p>
+<p>Enable inlay hints for generic arguments</p>
 ]]>
   </description>
 
