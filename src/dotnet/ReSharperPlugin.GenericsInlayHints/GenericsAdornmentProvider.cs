@@ -5,17 +5,17 @@ using JetBrains.TextControl.DocumentMarkup.IntraTextAdornments;
 namespace ReSharperPlugin.GenericsInlayHints;
 
 [SolutionComponent]
-public class SampleAdornmentProvider : IHighlighterIntraTextAdornmentProvider
+public class GenericsAdornmentProvider : IHighlighterIntraTextAdornmentProvider
 {
     public bool IsValid(IHighlighter highlighter)
     {
-        return highlighter.UserData is SampleInlayHintBase;
+        return highlighter.UserData is GenericsInlayHintBase;
     }
 
     public IIntraTextAdornmentDataModel CreateDataModel(IHighlighter highlighter)
     {
-        return highlighter.UserData is SampleInlayHint hint
-            ? new SampleAdornmentDataModel(hint.ParameterName)
+        return highlighter.UserData is GenericsInlayHint hint
+            ? new GenericsAdornmentDataModel(hint.ParameterName)
             : null;
     }
 }

@@ -11,16 +11,16 @@ using JetBrains.Util;
 namespace ReSharperPlugin.GenericsInlayHints;
 
 [PublicAPI]
-public class SampleAdornmentDataModel : IIntraTextAdornmentDataModel
+public class GenericsAdornmentDataModel : IIntraTextAdornmentDataModel
 {
-    public SampleAdornmentDataModel(string parameterName)
+    public GenericsAdornmentDataModel(string parameterName)
     {
         Text = parameterName + ":";
     }
 
     public void ExecuteNavigation(PopupWindowContextSource popupWindowContextSource)
     {
-        MessageBox.ShowInfo($"{nameof(SampleAdornmentDataModel)}.{nameof(ExecuteNavigation)}", "ReSharper SDK");
+        MessageBox.ShowInfo($"{nameof(GenericsAdornmentDataModel)}.{nameof(ExecuteNavigation)}", "ReSharper SDK");
     }
 
     public IntraTextAdornmentData Data

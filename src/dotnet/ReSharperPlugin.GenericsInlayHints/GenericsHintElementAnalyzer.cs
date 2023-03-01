@@ -9,8 +9,8 @@ using IReferenceName = JetBrains.ReSharper.Psi.CSharp.Tree.IReferenceName;
 namespace ReSharperPlugin.GenericsInlayHints;
 
 [ElementProblemAnalyzer(typeof(ITypeArgumentList),
-                        HighlightingTypes = new[] { typeof(SampleInlayHint) })]
-public class SampleHintElementAnalyzer: ElementProblemAnalyzer<ITypeArgumentList>
+                        HighlightingTypes = new[] { typeof(GenericsInlayHint) })]
+public class GenericsHintElementAnalyzer: ElementProblemAnalyzer<ITypeArgumentList>
 {
     protected override void Run(ITypeArgumentList          element,
                                 ElementProblemAnalyzerData data,
@@ -68,7 +68,7 @@ public class SampleHintElementAnalyzer: ElementProblemAnalyzer<ITypeArgumentList
         {
             var typeArgumentNode = typeArgumentList.TypeArgumentNodes[typeParam.Index];
 
-            consumer.AddHighlighting(new SampleInlayHint(typeParam.ShortName, typeArgumentNode, typeArgumentNode.GetDocumentStartOffset(), ""));
+            consumer.AddHighlighting(new GenericsInlayHint(typeParam.ShortName, typeArgumentNode, typeArgumentNode.GetDocumentStartOffset(), ""));
         }
     }
 

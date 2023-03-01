@@ -5,15 +5,15 @@ using JetBrains.UI.RichText;
 
 namespace ReSharperPlugin.GenericsInlayHints;
 
-public abstract class SampleInlayHintBase : IInlayHintWithDescriptionHighlighting
+public abstract class GenericsInlayHintBase : IInlayHintWithDescriptionHighlighting
 {
-    public const string HighlightAttributeIdBase = nameof(SampleInlayHintBase);
+    public const string HighlightAttributeIdBase = nameof(GenericsInlayHintBase);
     public const string HighlightAttributeGroupId = HighlightAttributeIdBase + "Group";
 
     private readonly DocumentOffset _offset;
     private readonly ITreeNode _node;
 
-    protected SampleInlayHintBase(ITreeNode node, DocumentOffset offset, string tooltip)
+    protected GenericsInlayHintBase(ITreeNode node, DocumentOffset offset, string tooltip)
     {
         _node   = node;
         _offset = offset;
@@ -30,11 +30,11 @@ public abstract class SampleInlayHintBase : IInlayHintWithDescriptionHighlightin
         return new DocumentRange(_offset);
     }
 
-    public RichText Description => $"ReSharper SDK: {nameof(SampleInlayHintBase)}.{nameof(Description)}";
+    public RichText Description => $"ReSharper SDK: {nameof(GenericsInlayHintBase)}.{nameof(Description)}";
     public string ToolTip
     {
         get;
         private set;
     }
-    public string ErrorStripeToolTip => $"ReSharper SDK: {nameof(SampleInlayHintBase)}.{nameof(ErrorStripeToolTip)}";
+    public string ErrorStripeToolTip => $"ReSharper SDK: {nameof(GenericsInlayHintBase)}.{nameof(ErrorStripeToolTip)}";
 }
