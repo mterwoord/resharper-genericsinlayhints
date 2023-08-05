@@ -20,7 +20,7 @@ namespace ReSharperPlugin.GenericsInlayHints;
                         EffectType = EffectType.INTRA_TEXT_ADORNMENT,
                         Layer = HighlighterLayer.ADDITIONAL_SYNTAX,
                         TransmitUpdates = true)]
-[DaemonIntraTextAdornmentProvider(typeof(GenericsAdornmentProvider))]
+[DaemonAdornmentProvider(typeof(GenericsAdornmentProvider))]
 [DaemonTooltipProvider(typeof(InlayHintTooltipProvider))]
 [StaticSeverityHighlighting(Severity.INFO, typeof(HighlightingGroupIds.CodeInsights), AttributeId = HighlightAttributeId)]
 public class GenericsInlayHint: GenericsInlayHintBase
