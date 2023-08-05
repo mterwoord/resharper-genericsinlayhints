@@ -3,7 +3,7 @@ using JetBrains.Annotations;
 using JetBrains.Application.UI.Controls.BulbMenu.Items;
 using JetBrains.Application.UI.Controls.Utils;
 using JetBrains.Application.UI.PopupLayout;
-using JetBrains.TextControl.DocumentMarkup.IntraTextAdornments;
+using JetBrains.TextControl.DocumentMarkup.Adornments;
 using JetBrains.UI.Icons;
 using JetBrains.UI.RichText;
 using JetBrains.Util;
@@ -11,8 +11,9 @@ using JetBrains.Util;
 namespace ReSharperPlugin.GenericsInlayHints;
 
 [PublicAPI]
-public class GenericsAdornmentDataModel : IIntraTextAdornmentDataModel
+public class GenericsAdornmentDataModel : IAdornmentDataModel
 {
+    
     public GenericsAdornmentDataModel(string parameterName)
     {
         Text = parameterName + ":";
@@ -23,11 +24,11 @@ public class GenericsAdornmentDataModel : IIntraTextAdornmentDataModel
         MessageBox.ShowInfo($"{nameof(GenericsAdornmentDataModel)}.{nameof(ExecuteNavigation)}", "ReSharper SDK");
     }
 
-    public IntraTextAdornmentData Data
+    public AdornmentData Data
     {
         get
         {
-            var result = new IntraTextAdornmentData(Text, IconId, IntraTextAdornmentFlags.IsNavigable, IntraTextPlacement.DefaultBeforeThisChar, InlayHintsMode);
+            var result = new AdornmentData(Text, IconId, AdornmentFlags.IsNavigable, AdornmentPlacement.DefaultBeforeThisChar, InlayHintsMode);
             return result;
         }
 }
@@ -37,5 +38,5 @@ public class GenericsAdornmentDataModel : IIntraTextAdornmentDataModel
     public IEnumerable<BulbMenuItem> ContextMenuItems { get; }
     public TextRange? SelectionRange { get; }
     public IconId IconId { get; }
-    public InlayHintsMode InlayHintsMode => InlayHintsMode.Always;
+    public PushToHintMode InlayHintsMode => PushToHintMode.Always;
 }

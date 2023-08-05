@@ -1,13 +1,13 @@
 ﻿<Project>
 
   <PropertyGroup>
-    <SdkVersion>2022.3.1</SdkVersion>
+    <SdkVersion>2023.2.0</SdkVersion>
 
     <Title>Generics Inlay Hints</Title>
     <Description>Extension for Rider and ReSharper to enable inlay hints for generic arguments.</Description>
 
     <Authors>Matthijs ter Woord</Authors>
-    <Copyright>Copyright $([System.DateTime]::Now.Year) Maintainers of Matthijs ter Woord</Copyright>
+    <Copyright>Copyright $([System.DateTime]::Now.Year) Matthijs ter Woord</Copyright>
     <PackageTags>resharper plugin</PackageTags>
 
     <PackageProjectUrl>https://github.com/mterwoord/resharper-genericsinlayhints</PackageProjectUrl>
