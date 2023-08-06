@@ -21,7 +21,7 @@ public class GenericsAdornmentDataModel : IAdornmentDataModel
 
     public void ExecuteNavigation(PopupWindowContextSource popupWindowContextSource)
     {
-        MessageBox.ShowInfo($"{nameof(GenericsAdornmentDataModel)}.{nameof(ExecuteNavigation)}", "ReSharper SDK");
+        //MessageBox.ShowInfo($"{nameof(GenericsAdornmentDataModel)}.{nameof(ExecuteNavigation)}", "ReSharper SDK");
     }
 
     public AdornmentData Data
@@ -38,5 +38,5 @@ public class GenericsAdornmentDataModel : IAdornmentDataModel
     public IEnumerable<BulbMenuItem> ContextMenuItems { get; }
     public TextRange? SelectionRange { get; }
     public IconId IconId { get; }
-    public PushToHintMode InlayHintsMode => PushToHintMode.Always;
+    public PushToHintMode InlayHintsMode => PushToHintMode.Default;
 }
