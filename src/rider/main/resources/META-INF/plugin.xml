@@ -1,6 +1,6 @@
 <idea-plugin require-restart="true">
   <id>generic-inlay-hints-rider</id>
-  <name>GenericInlayHints</name>
+1  <name>GenericInlayHints</name>
   <version>_PLACEHOLDER_</version>
   <vendor url="https://github.com/mterwoord/resharper-genericsinlayhints">Matthijs ter Woord</vendor>
   <idea-version since-build="_PLACEHOLDER_" until-build="_PLACEHOLDER_" />

@@ -1,7 +1,7 @@
 ﻿<Project>
 
   <PropertyGroup>
-    <SdkVersion>2023.2.0</SdkVersion>
+    <SdkVersion>2025.2.0</SdkVersion>
 
     <Title>Generics Inlay Hints</Title>
     <Description>Extension for Rider and ReSharper to enable inlay hints for generic arguments.</Description>
